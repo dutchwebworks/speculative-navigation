@@ -15,5 +15,5 @@ For this demo make sure you turn off (web browser) **blocking tools** like uBloc
 
 As of this writing **speculative navigation** only works in the following web browser(s):
 
-* Works in: Chrome, Edge en Opera
+* Works in: Chrome, Edge and Opera
 * Doesn’t work in: Firefox, Brave and Safari (macOS & iOS)
