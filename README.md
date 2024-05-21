@@ -1,4 +1,4 @@
-# Example of speculative navigation
+# Speculative Navigation API
 
 *By Poort80 Amsterdam, May 2024*
 
@@ -26,28 +26,28 @@ This (inspired) demo contains a few static HTML pages and a small piece of JavaS
 
 Supported web browsers (see below at the end of this documentation) will then **prefetch** (prerender) those web page URL's in the background.
 
-This helps to **improve page load speeds** when the user actually goes to one of those URL's. These speculationrules can be constructed and injected **after the page load**. Based on any criteria you want. 
-
-This can be done up-front, server-side, or client-side via JavaScript after page load.
+This helps to **improve almost instant page loading**. These *speculationrules* can be constructed and injected based on any criteria you want. This can be done up-front, server-side, or client-side via JavaScript after page load.
 
 ### Usage examples
 
-* According to analytics; add the most visited (organic) web page URL's of your site into those speculationrules. 
-* Create an arbitrary list of URL's you think is logical for the user to follow. Maybe like a shop checkout process.
+On a per web page basis ask the question: "Where would the user likely go next?"
+
+* According to web analytics; add the most visited (organic) web page URL's of your site into those speculationrules. 
+* Create an arbitrary list of URL's YOU think is logical for the user to follow. Maybe like a shop checkout process.
 * Or construct such a list of URL's when the user hover's over certain links in the web page. And then inject those URL's as a speculationrules list into the web page for preloading.
 
 The end result is almost instant page loading!
 
-## Developer tools
+## Developer tools and debugging
 
-As of this writing Google Chrome has great developer tools to inspect these speculationrules in a separate dev. panels.
+As of this writing Google Chrome has great developer tools to inspect these speculationrules in separate dev. panels.
 
 * See this article [Chrome for Developers: Debugging speculation rules](https://developer.chrome.com/docs/devtools/application/debugging-speculation-rules)
 * See this video  [Chrome for Developers: Debugging speculative navigations for faster page loads](https://www.youtube.com/watch?v=BIpz9Hdjm_A)
 
 ## What about the HTML meta-tags for preconnect, prefetch and preload?
 
-We should also use the following in our HTML-head to speed up the preloading and preconnecting to resrouces we use later.
+While the below is great for preloading certain *asset* file URL's to prefetch / preconnecting to other domains. 
 
 ```html
 <link rel="preconnect" href="https://cdn.mysite.nl">
@@ -59,7 +59,7 @@ We should also use the following in our HTML-head to speed up the preloading and
 <link rel="preload" href="/assets/img/logo.svg" as="image" type="image/svg+xml" crossorigin>
 ```
 
-While the above is great for preloading certain *assets* file URL's and preconnecting to other domains, the Speculation Rules API **is designed for future navigations**. It targets document URL's rather than specific resource files. And makes sense in a multi-page application (MPA's) rather than a single-page application (SPA's).
+The Speculation Rules API **is designed for future navigations**. It targets document URL's rather than specific resource files. And makes sense in a multi-page application (MPA's) rather than a single-page application (SPA's).
 
 ## More information
 
