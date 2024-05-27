@@ -117,8 +117,11 @@ footer p{
     color: var(--clr-light);
 }
 
-.lcp_list {
-    white-space: pre-wrap;
-    padding: 20px;
-    background-color: var(--clr-light);
+#lcp-heading {
+    font-size: 22px;
+}
+
+#lcp-time {
+    font-size: 36px;
+    font-weight: 700;
 }

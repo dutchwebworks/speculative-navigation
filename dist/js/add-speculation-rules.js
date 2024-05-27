@@ -8,7 +8,7 @@ function addSpeculationRules() {
     specScript.type = 'speculationrules';
     specScript.textContent = `
         {
-          "prefetch": [{
+          "prerender": [{
             "source": "list",
             "urls": [
               "index.html",

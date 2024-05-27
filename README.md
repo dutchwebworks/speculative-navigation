@@ -24,19 +24,9 @@ This (inspired) demo contains a few static HTML pages and a small piece of JavaS
 </script>
 ```
 
-Supported web browsers (see below at the end of this documentation) will then **prefetch** (prerender) those web page URL's in the background.
+Supported web browsers (see below at the end of this documentation) will then **prefetch** those web page URL's in the background. You can see this in the Dev. Tools Network panel.
 
 This helps to **improve almost instant page loading**. These *speculationrules* can be constructed and injected based on any criteria you want. This can be done up-front, server-side, or client-side via JavaScript after page load.
-
-### Usage examples
-
-On a per web page basis ask the question: "Where would the user likely go next?"
-
-* According to web analytics; add the most visited (organic) web page URL's of your site into those speculationrules. 
-* Create an arbitrary list of URL's YOU think is logical for the user to follow. Maybe like a shop checkout process.
-* Or construct such a list of URL's when the user hover's over certain links in the web page. And then inject those URL's as a speculationrules list into the web page for preloading.
-
-The end result is almost instant page loading!
 
 ## Developer tools and debugging
 
