@@ -12,15 +12,71 @@
 </head>
 <body>
     <div class="wrapper">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/prerender">Prerender demo</a></li>
+                    <li><a href="/prefetch">Prefetch demo</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <main>
             <h1>Speculative Navigation</h1>
 
-            <nav>
-                <ul>
-                    <li><a href="/prerender">Prerender</a></li>
-                    <li><a href="/prefetch">Prefetch</a></li>
-                </ul>
-            </nav>
+            <p>Prefetching or even prerendering certain URL's for (almost) instand page loading experience.</p>
+
+            <p><strong>Click on a demo link in the header.</strong></p>
+
+            <p>My simplified demo of the (Google) Speculative Navigation API </p>
+
+            <h2>Articles</h2>
+
+            <ul>
+                <li><a href="https://developer.chrome.com/docs/devtools/application/debugging-speculation-rules">Developer Chrome: Debug speculation rules with Chrome DevTools</a></li>
+                <li><a href="https://developer.chrome.com/blog/devtools-tips-31">Developer Chrome: DevTools Tips: Debugging speculative navigations for faster page loads</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Speculative_loading">MDN: Speculative loading</a></li>
+            </ul>
+
+            <h2>Web browser support?</h2>
+
+            <p>As of this writing (May, 2024) the speculative navigation only works in the following web browser(s):</p>
+
+            <h3>Works in (desktop and mobile):</h3>
+
+            <ul>
+                <li>Chrome</li>
+                <li>Edge</li>
+                <li>Opera</li>
+                <li>Samsung Internet (browser)</li>
+                <li>WebView Android</li>
+            </ul>
+
+            <h3>Doesn't work in (desktop and mobile):</h3>
+
+            <ul>
+                <li>Firefox</li>
+                <li>Brave</li>
+                <li>Safari (macOS, iPadOS &amp; iOS)</li>
+            </ul>
+
+            <h2>Inspirational video</h2>
+
+            <iframe 
+                width="560"
+                height="315"
+                src="https://www.youtube-nocookie.com/embed/BIpz9Hdjm_A?si=BXo8m_1jNwKKSGXw"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                loading="lazy">
+            </iframe>
+
+            <h2>3rd party demo</h2>
+
+            <p><a href="https://speculative-rules.glitch.me/">https://speculative-rules.glitch.me/</a></p>
         </main>
 
         <footer>
