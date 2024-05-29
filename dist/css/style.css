@@ -85,6 +85,9 @@ img {
     margin-block-start: 0;
 }
 
+/* Navigation
+------------------------------------------------- */
+
 nav {
     border-block-end: 1px solid var(--clr-dark)
 }
@@ -106,16 +109,29 @@ nav ul {
     padding-inline-start: 0;
 }
 
+/* Footer
+------------------------------------------------- */
+
 footer {
     border-block-start: 1px solid var(--clr-light);
     padding-block-start: 5px;    
     font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-footer p{
+footer p {
     margin: 0;
     color: var(--clr-light);
 }
+
+footer a {
+    color: inherit;
+}
+
+/* LCP
+------------------------------------------------- */
 
 #lcp-heading {
     font-size: 22px;
