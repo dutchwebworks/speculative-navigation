@@ -18,7 +18,7 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Prerender home</a></li>
                     <li><a href="movie-detail.html">Movie detail</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="news.html">News</a></li>
@@ -32,15 +32,52 @@
         <main>
             <h1>Prerender demo</h1>
 
-            <h2>Is the Speculation Rules API supported in your web browser?</h2>
-            
-            <p>Status: <span id="supported"></span></p>
+            <p>In this case prerendering means that the web browser will fetch the URL's and (pre)renders those web pages in the background.</p>
 
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem delectus distinctio velit nihil quis vitae voluptate enim quidem cumque? Harum!</p>
+            <h2>Injected into this web page</h2>
+            
+            <p>The following script tag is injected into this web page.</p>
+            
+            <p>Supported webbrowsers will fetch and prerender the URL's listed in the speculationrules object in the background.</p>
+
+            <p>The next pages, <strong>in the above main menu</strong>, should load much faster.</p>
+
+            <code>
+                <pre>&lt;script type=&quot;speculationrules&quot;&gt;
+{
+    "prerender": [{
+        "source": "list",
+        "urls": [
+            "/prerender/index.html",
+            "/prerender/movie-detail.html",
+            "/prerender/about.html",
+            "/prerender/catalog.html"
+        ]
+    }]
+}
+&lt;/script&gt;</pre>
+            </code>
+
+            <h2>Debugging speculation rules</h2>
+            
+            <ul>
+                <li>Open the Chrome Dev. Tools (F12)</li>
+                <li>Click on the "<strong>Application</strong>" -tab</li>
+                <li>And search for "<strong>Speculative loads</strong>" -panel in the sidebar.</li>
+                <li>Expand this menu item and click on the "<strong>Speculations</strong>" -item</li>
+            </ul>
+
+            <p>Here you'll find a list of all the speculative loaded URL's and their status.</p>
+
+            <h3>Inspecting other prerendered pages</h3>
+
+            <p>In the top right part, of the Chrome Dev. Tools, you'll see a dropdown initially named "Main". Which is the current
+                web page. Clickiing on the menu you can go to, and use all the Dev. Tools, to inspect those "prerenders" URL's.</p>
         </main>
         
         <footer>
-            <p>&copy; 2024</p>
+            <p>By Dutchwebworks, May 2024</p>
+            <p><a href="https://github.com/dutchwebworks/speculative-navigation" target="_blank">View on Github</a></p>
         </footer>
     </div>
 </body>

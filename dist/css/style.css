@@ -70,7 +70,8 @@ b {
     font-weight: 700;
 }
 
-img {
+img,
+iframe {
     max-width: 100%;
     height: auto;
     display: block;
@@ -113,12 +114,26 @@ nav ul {
     padding-inline-start: 0;
 }
 
+/* Quote
+------------------------------------------------- */
+
+.quote {
+    font-style: italic;
+    color: var(--clr-gray);
+    border-left: 1px solid var(--clr-light);
+    padding-inline-start: 20px;
+    margin-block: 60px;
+    font-size: 22px;
+    font-weight: 700;
+}
+
 /* Footer
 ------------------------------------------------- */
 
 footer {
     border-block-start: 1px solid var(--clr-light);
     padding-block-start: 5px;    
+    padding-block-end: 20px;    
     font-size: 14px;
     display: flex;
     justify-content: space-between;
@@ -132,6 +147,18 @@ footer p {
 
 footer a {
     color: inherit;
+}
+
+/* Code example
+------------------------------------------------- */
+
+code {
+    display: block;
+    margin-block: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #eee;
+    font-size: 22px;
 }
 
 /* LCP

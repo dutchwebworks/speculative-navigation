@@ -20,7 +20,7 @@
         <header>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Prefetch home</a></li>
                     <li><a href="movie-detail.html">Movie detail</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="news.html">News</a></li>
@@ -34,12 +34,37 @@
         <main>
             <h1>Prefetch demo</h1>
 
-            <h2>Is the Speculation Rules API supported in your web browser?</h2>
-            
-            <p>Status: <span id="supported"></span></p>
+            <p>The following script tag is injected into this web page.</p>
 
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem delectus distinctio velit nihil quis
-                vitae voluptate enim quidem cumque? Harum!</p>
+            <p>Supported webbrowsers will prefetch the URL's listed in the speculationrules object.</p>
+
+            <p>The next pages, <strong>in the above main menu</strong>, should load much faster.</p>
+
+            <code>
+                <pre>&lt;script type=&quot;speculationrules&quot;&gt;
+{
+    "prefetch": [{
+        "source": "list",
+        "urls": [
+            "/prefetch/index.html",
+            "/prefetch/movie-detail.html",
+            "/prefetch/about.html",
+            "/prefetch/catalog.html"
+        ]
+    }]
+}
+&lt;/script&gt;</pre>
+            </code>
+
+            <h2>Debugging speculation rules</h2>
+
+            <ul>
+                <li>Open the Chrome Dev. Tools (F12)</li>
+                <li>Click on the "<strong>Application</strong>" -tab</li>
+                <li>And search for "<strong>Speculative loads</strong>" -panel in the sidebar.</li>
+            </ul>
+
+            <p>Here you'll find a list of all the speculative loaded URL's and their status.</p>
         </main>
 
         <footer>
