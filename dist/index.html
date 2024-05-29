@@ -9,6 +9,7 @@
     <link rel="icon" href="/favicon.ico">
     
     <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/supports-speculative-navigation.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
@@ -29,6 +30,14 @@
             <p><strong>Click on a demo link in the header.</strong></p>
 
             <p>My simplified demo of the (Google) Speculative Navigation API </p>
+
+            <h2>Imporant!</h2>
+
+            <p>Make sure you (temporarily) <strong>turn off any content blocking tools</strong> like uBlock Origin or AdBlocker like web browser extensions. Othwerise the prefetching will not work.</p>
+
+            <h3>Is the Speculation Rules API supported in your web browser?</h3>
+
+            <p>Status: <span id="supported"></span></p>
 
             <h2>Articles</h2>
 
@@ -74,7 +83,7 @@
                 loading="lazy">
             </iframe>
 
-            <h2>3rd party demo</h2>
+            <h3>3rd party demo</h3>
 
             <p><a href="https://speculative-rules.glitch.me/">https://speculative-rules.glitch.me/</a></p>
         </main>
