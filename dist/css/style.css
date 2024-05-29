@@ -89,7 +89,10 @@ img {
 ------------------------------------------------- */
 
 nav {
-    border-block-end: 1px solid var(--clr-dark)
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-block-end: 1px solid var(--clr-dark);
 }
 
 nav a {
