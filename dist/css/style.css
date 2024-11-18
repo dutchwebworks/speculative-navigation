@@ -87,6 +87,14 @@ iframe {
     margin-block-start: 0;
 }
 
+main a {
+    color: var(--clr-primary);
+
+    &:hover {
+        color: var(--clr-secondary);
+    }
+}
+
 /* Navigation
 ------------------------------------------------- */
 

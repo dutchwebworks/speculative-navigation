@@ -1,6 +1,6 @@
 # Speculative Navigation API
 
-*By Poort80 Amsterdam, May 2024*
+_By Poort80 Amsterdam, November 2024_
 
 For this demo to work make sure you (temporarily) turn off your web browser's **content blocking tools** like uBlock Origin or AdBlocker like extensions. It prevents things like pre-loading of other web pages.
 
